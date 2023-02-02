@@ -1,0 +1,2542 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container1 {
+    padding: 0% 14%;
+}
+
+.back_to_top {
+    display: inline;
+    position: fixed;
+    z-index: 99;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+/* ========================== Grid ========================== */
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 0px;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+
+/* ========================== Margin ========================== */
+
+.m-0 {
+    margin: 0px;
+}
+
+.mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.my-0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+/* ========================== Padding ========================== */
+
+.p-0 {
+    padding: 0px;
+}
+
+.px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+
+/* =============== Custom =============== */
+
+body {
+    overflow-x: hidden;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.42857143;
+}
+
+.slick-prev {
+    left: 2rem;
+    z-index: 2;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 2rem;
+}
+
+.slick-next {
+    right: 2rem;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li button:before {
+    color: #fff;
+    opacity: 0.25;
+    font-size: 0.7rem;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #fff;
+}
+
+h1.header {
+    color: #313131;
+    font-family: "Libre Baskerville", Sans-serif;
+    font-size: 3.125rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 4.69rem;
+    letter-spacing: 0px;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+p.sub_header {
+    color: #616161;
+    font-family: "Poppins", Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 19px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+
+/* ========================== Navbar ========================== */
+
+.navbar1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1.4rem 1rem;
+    background-color: #fff;
+    color: #000;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+
+.navbar1 .logo {
+    width: 250px;
+}
+
+.navbar1 .logo img {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* ===== Navbar Menu ===== */
+
+.nav-links ul.menu {
+    font-size: 0.9rem;
+    list-style: none;
+}
+
+.nav-links ul.menu li {
+    display: inline;
+    padding: 0rem 1rem;
+}
+
+.nav-links ul.menu li a {
+    color: #000;
+    font-family: 'Montserrat', 'Arial';
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    padding-top: 4px;
+}
+
+.nav-links ul.menu li a:hover {
+    color: #0366d6;
+    transition: 0.3s;
+}
+
+.nav-links ul.menu li a::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: #0366d6;
+    position: absolute;
+    left: 0;
+    top: -1px;
+    transition: 0.5s;
+}
+
+.nav-links ul.menu li a:hover::after {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.nav-links ul.menu li.active a {
+    color: #0366d6;
+}
+
+.nav-links ul.menu li.active a::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: #0366d6;
+    position: absolute;
+    left: 0;
+    top: -1px;
+    transition: 0.5s;
+}
+
+
+/* ========================== Slider CSS ========================== */
+
+.box {
+    width: 100%;
+    height: 600px;
+}
+
+.box .slider_content_container {
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.box .slider_content_container .slider_transparency {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.box .slider_content_container .slider_transparency .slider_content {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box .slider_content_container .slider_transparency .slider_content h1 {
+    color: #ffffff;
+    font-size: 250%;
+    font-family: 'Playfair Display';
+    text-shadow: none;
+    line-height: 1.3;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    font-weight: 700;
+    padding: 0rem 0rem 2rem 0rem;
+}
+
+.box .slider_content_container .slider_transparency .slider_content button {
+    color: #ffffff;
+    font-size: 100%;
+    font-family: 'Montserrat', 'Arial';
+    font-weight: 600;
+    line-height: 1.5;
+    padding: 0.8em 1.5em;
+    box-shadow: none;
+    border: 2px solid #fff;
+    border-radius: 3rem;
+    background-color: transparent;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.box .slider_content_container .slider_transparency .slider_content button:hover {
+    background: #1a237e;
+    border: 2px solid #1a237e;
+    padding: 0.8em 3em;
+    transition: 0.4s;
+}
+
+
+/* ========================== What Is Interbiz ========================== */
+
+.wii {
+    width: 100%;
+    padding: 8rem 0rem;
+}
+
+.wii .wii_container {
+    display: flex;
+    align-items: center;
+}
+
+.wii .wii_container img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.wii .wii_container .wii_content {
+    width: 100%;
+    height: 560px;
+    padding: 2rem 5rem;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px 5px rgb(0 0 0 / 8%);
+}
+
+.wii .wii_container .wii_content h1 {
+    color: #313131;
+    font-family: "Libre Baskerville", Sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 75px;
+    letter-spacing: 0px;
+    padding-bottom: 1rem;
+}
+
+.wii .wii_container .wii_content p {
+    color: #000000;
+    font-family: "Poppins", Sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 27px;
+    letter-spacing: 0px;
+    padding-bottom: 0.6rem;
+}
+
+.wii .wii_container .wii_content button {
+    font-size: 1rem;
+    font-family: "Poppins", Sans-serif;
+    font-weight: 500;
+    line-height: 3.125rem;
+    color: #ffffff;
+    background-color: #1a237e;
+    border-radius: 3rem;
+    padding: 0rem 2.5rem;
+    border: 2px solid #1a237e;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: 0.4s;
+}
+
+.wii .wii_container .wii_content button:hover {
+    color: #1a237e;
+    border-color: #1a237e;
+    padding: 0rem 3.5rem;
+    transition: 0.4s;
+    background-color: transparent;
+}
+
+
+/* ========================== Our Services ========================== */
+
+.our_services {
+    padding: 4rem 0rem;
+    background-color: #f7f7f7;
+}
+
+.our_services .services_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.our_services .services_container .card_container {
+    padding: 1rem;
+    background-color: transparent;
+}
+
+.our_services .services_container .card_container .card {
+    width: 100%;
+    height: 480px;
+    border: 0px solid #fc5f45;
+    border-width: 0px 0px 4px 0px;
+    padding: 2rem 1rem 1rem 1rem;
+    box-shadow: 0px 0px 25px 0px rgb(0 0 0 / 5%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    transition: 0.4s;
+}
+
+.our_services .services_container .card_container .card img {
+    width: 65%;
+    height: 90px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.our_services .services_container .card_container .card h3 {
+    color: #313131;
+    font-family: "Poppins", Sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 2.07rem;
+    letter-spacing: 0px;
+    padding: 0.6rem 0rem 1rem 0rem;
+}
+
+.our_services .services_container .card_container .card p {
+    color: #000000;
+    font-size: 0.9rem;
+    font-family: "Poppins", Sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.68rem;
+    letter-spacing: 0.7px;
+    text-align: center;
+}
+
+.our_services .services_container .card_container .card button {
+    font-size: 1rem;
+    font-family: "Poppins", Sans-serif;
+    font-weight: 500;
+    line-height: 2.8rem;
+    color: #ffffff;
+    background-color: #1a237e;
+    border: 2px solid #1a237e;
+    border-radius: 2rem;
+    padding: 0rem 2.5rem;
+    margin-top: auto;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.our_services .services_container .card_container .card:hover {
+    transform: scale(1.03);
+    transition: 0.4s;
+}
+
+.our_services .services_container .card_container .card button:hover {
+    color: #1a237e;
+    border-color: #1a237e;
+    background-color: transparent;
+    padding: 0rem 3.5rem;
+    transition: 0.4s;
+}
+
+
+/* ========================== Counter Section ========================== */
+
+.counter {
+    width: 100%;
+    padding: 8rem 0rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.counter .background_overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #262732;
+    opacity: 0.85;
+}
+
+.counter .counter_container {
+    position: relative;
+}
+
+.counter .counter_container .counter_content_block {
+    padding: 1rem;
+}
+
+.counter .counter_container .counter_content_block .counter_content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.counter .counter_container .counter_content_block .counter_content img {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    object-position: center;
+    transition: 0.6s;
+}
+
+.counter .counter_container .counter_content_block .counter_content .counter_count_block {
+    display: flex;
+    align-items: center;
+    padding-top: 1.5rem;
+}
+
+.counter .counter_container .counter_content_block .counter_content .counter_count_block h2 {
+    color: #FFFFFF;
+    font-family: "Roboto", Sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+.counter .counter_container .counter_content_block .counter_content .counter_count_block span {
+    color: #fff;
+    font-size: 1.75rem;
+    font-family: "Roboto", Sans-serif;
+}
+
+.counter .counter_container .counter_content_block .counter_content p {
+    color: #fff;
+    text-align: center;
+    font-size: 1.188rem;
+    font-weight: 400;
+    line-height: 2.5;
+    padding-bottom: 3rem;
+}
+
+.counter .counter_container .counter_content_block .counter_content span.dot img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.counter .counter_container .counter_content_block .counter_content:hover img {
+    transform: scale(1.3);
+    transition: 0.6s;
+}
+
+
+/* ========================== We Work With ========================== */
+
+.we_work_with {
+    padding: 4rem 0rem;
+}
+
+.we_work_with .software_section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.we_work_with .software_section .software_container {
+    padding: 3rem;
+}
+
+.we_work_with .software_section .software_container img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    object-position: center;
+    transform: scale(1, 1);
+    transition: 1s;
+}
+
+.we_work_with .software_section .software_container img:hover {
+    transform: scale(1.2, 1.2);
+    transition: 1s;
+}
+
+
+/* ========================== Journey ========================== */
+
+.journey {
+    background-color: rgba(26, 35, 126, 0.19);
+    padding: 5rem 0rem;
+}
+
+.journey .journey_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.journey .journey_content h3 {
+    color: #000000;
+    font-family: "Poppins", Sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    padding-right: 2rem;
+}
+
+.journey .journey_content button {
+    color: #ffffff;
+    font-size: 1.125rem;
+    font-family: "Poppins", Sans-serif;
+    font-weight: 500;
+    line-height: 3.125rem;
+    cursor: pointer;
+    border: 2px solid #1a237e;
+    border-radius: 3rem;
+    background-color: #1a237e;
+    padding: 0rem 2.5rem;
+    transition: 0.5s;
+}
+
+.journey .journey_content button:hover {
+    color: #1a237e;
+    border-color: #1a237e;
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+
+/* ========================== Industries ========================== */
+
+.industries {
+    padding: 6rem 0rem;
+}
+
+.industries .industries_section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.industries .industries_section .industries_container {
+    padding: 2rem;
+    transition: 0.5s;
+}
+
+.industries .industries_section .industries_container .industries_block {
+    height: 450px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.industries .industries_section .industries_container .industries_block img {
+    width: 100%;
+    height: 90px;
+    object-fit: contain;
+    object-position: center;
+    transition: 0.5s;
+}
+
+.industries .industries_section .industries_container .industries_block h3 {
+    color: #000000;
+    font-size: 1.5rem;
+    font-family: "Libre Baskerville", Sans-serif;
+    padding: 2rem 0rem 1rem 0rem;
+}
+
+.industries .industries_section .industries_container .industries_block p {
+    font-size: 0.9rem;
+    font-family: "Poppins", Sans-serif;
+    line-height: 1.42857143;
+    text-align: center;
+    line-height: 1.68rem;
+    letter-spacing: 0.7px;
+}
+
+.industries .industries_section .industries_container .industries_block button {
+    fill: #ffffff;
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: "Poppins", Sans-serif;
+    font-weight: 500;
+    line-height: 2.8rem;
+    text-transform: none;
+    text-decoration: none;
+    border: 2px solid #1a237e;
+    border-radius: 1.875rem;
+    cursor: pointer;
+    background-color: #1a237e;
+    padding: 0rem 2.5rem;
+    margin-top: auto;
+    transition: 0.5s;
+}
+
+.industries .industries_section .industries_container:hover {
+    border-radius: 1rem;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.13);
+    transition: 0.5s;
+}
+
+.industries .industries_section .industries_container .industries_block:hover img {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.industries .industries_section .industries_container .industries_block button:hover {
+    color: #1a237e;
+    background-color: transparent;
+    border-color: #1a237e;
+    padding: 0rem 3.5rem;
+    transition: 0.5s;
+}
+
+
+/* ========================== Testimonial ========================== */
+
+.textimonial {
+    background-color: rgba(26, 35, 126, 0.19);
+    padding: 4rem 0rem;
+}
+
+.textimonial h1.header {
+    color: #000000;
+    font-size: 4.0625rem;
+    font-family: "Libre Baskerville", Sans-serif;
+    font-weight: 600;
+}
+
+.textimonial .client_container {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.textimonial .client_container .client_review {
+    padding: 2rem;
+}
+
+.textimonial .client_container .client_review .client_review_block {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.textimonial .client_container .client_review .client_review_block span i {
+    color: #bfbfbf;
+    font-size: 3rem;
+    object-fit: contain;
+    object-position: center;
+    transition: 0.5s;
+}
+
+.textimonial .client_container .client_review .client_review_block p.client_thought {
+    color: #000000;
+    font-family: "Poppins", Sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 2em;
+    padding: 2rem 0rem;
+}
+
+.textimonial .client_container .client_review .client_review_block h5.client_name {
+    color: #000000;
+    font-size: 1.25rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+}
+
+.textimonial .client_container .client_review .client_review_block::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: #1a237e;
+    position: relative;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.textimonial .client_container .client_review .client_review_block:hover::after {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.textimonial .client_container .client_review .client_review_block:hover span i {
+    color: #1a237e;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+
+/* ========================== Get In Touch ========================== */
+
+.get_in_touch {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    padding: 4rem 0rem;
+}
+
+.get_in_touch .background_overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #262732;
+    opacity: 0.85;
+}
+
+.get_in_touch .git_block {
+    position: relative;
+}
+
+.get_in_touch .git_block h1.header {
+    color: #ffffff;
+    font-family: "Libre Baskerville", Sans-serif;
+    font-size: 3.125rem;
+    font-weight: 600;
+    line-height: 4.6875rem;
+}
+
+.get_in_touch .git_block .git_form_container {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.get_in_touch .git_block .git_form_container .git_input_container {
+    padding: 1rem;
+}
+
+.get_in_touch .git_block .git_form_container .git_input_container .git_input {
+    width: 100%;
+}
+
+.get_in_touch .git_block .git_form_container .git_input_container .git_input label {
+    color: #fff;
+    font-size: 0.9rem;
+    font-family: "Roboto", Sans-serif;
+}
+
+.get_in_touch .git_block .git_form_container .git_input_container .git_input input {
+    width: 100%;
+    font-size: 0.9rem;
+    font-family: "Poppins", Sans-serif;
+    font-weight: 400;
+    line-height: 1.875rem;
+    text-align: left;
+    border: 1px solid #efefef;
+    border-radius: 0.25rem;
+    background-color: #fefefe;
+    padding: 0.4375rem 0.75rem;
+}
+
+.get_in_touch .git_block .git_form_container .git_input_container .git_input textarea {
+    width: 100%;
+    font-size: 0.9rem;
+    font-family: "Poppins", Sans-serif;
+    font-weight: 400;
+    line-height: 1.875rem;
+    text-align: left;
+    border: 1px solid #efefef;
+    border-radius: 0.25rem;
+    background-color: #fefefe;
+    padding: 0.4375rem 0.75rem;
+}
+
+.get_in_touch .git_block .git_form_container .git_input_container .git_input .button_block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.get_in_touch .git_block .git_form_container .git_input_container .git_input .button_block button.btn {
+    background-color: #fc5f45;
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: "Poppins", Sans-serif;
+    font-weight: 500;
+    line-height: 2.8rem;
+    border: 2px solid #fc5f45;
+    border-radius: 1.875rem;
+    padding: 0rem 2.5rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.get_in_touch .git_block .git_form_container .git_input_container .git_input .button_block button.btn:hover {
+    color: #fc5f45;
+    background-color: transparent;
+    border-color: #fc5f45;
+    padding: 0rem 3.5rem;
+    transition: 0.5s;
+}
+
+.get_in_touch .company_details {
+    position: relative;
+    padding-top: 2rem;
+}
+
+.get_in_touch .company_details .cd_container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.get_in_touch .company_details .cd_container .cd_block_container {
+    height: 350px;
+    border-style: solid;
+    border-width: 0px 0px 3px 0px;
+    border-color: #38c695;
+    padding: 3.125rem 2.5rem 2.8125rem 2.5rem;
+    background-color: rgba(38, 39, 50, 0.85);
+}
+
+.get_in_touch .company_details .cd_container .cd_block_container .cd_block {
+    width: 100%;
+    text-align: center;
+}
+
+.get_in_touch .company_details .cd_container .cd_block_container .cd_block h6 {
+    color: #38c695;
+    font-family: "Poppins", Sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.625rem;
+    padding-bottom: 2rem;
+}
+
+.get_in_touch .company_details .cd_container .cd_block_container .cd_block p {
+    color: #ffffff;
+    font-family: "Poppins", Sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6875rem;
+}
+
+.get_in_touch .company_details .cd_container .cd_block_container .cd_block ul {
+    list-style: none;
+    color: #ffffff;
+    font-family: "Poppins", Sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6875rem;
+}
+
+.get_in_touch .company_details .cd_container .cd_block_container .cd_block .socal_media {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.get_in_touch .company_details .cd_container .cd_block_container .cd_block .socal_media a {
+    text-decoration: none;
+}
+
+.get_in_touch .company_details .cd_container .cd_block_container .cd_block .socal_media a i {
+    color: #fff;
+    font-size: 2rem;
+    transition: 1s;
+}
+
+.get_in_touch .company_details .cd_container .cd_block_container .cd_block .socal_media a:hover i {
+    color: #cf4f54;
+    transform: rotate(360deg);
+    transition: 1s;
+}
+
+.get_in_touch .company_details .cd_container .find_us {
+    border-color: #b27cf5;
+}
+
+.get_in_touch .company_details .cd_container .find_us .cd_block h6 {
+    color: #b27cf5;
+}
+
+.get_in_touch .company_details .cd_container .follow_us {
+    border-color: #feb960;
+}
+
+.get_in_touch .company_details .cd_container .follow_us .cd_block h6 {
+    color: #feb960;
+}
+
+
+/* ========================== Footer ========================== */
+
+footer {
+    background-color: #24292e;
+}
+
+footer p {
+    color: #fff;
+    padding: 1rem 0rem;
+    text-align: center;
+}
+
+footer p a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+
+/* ===================== Message Form ============ */
+
+#form_message {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0%;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#form_message .message_container {
+    width: 50%;
+    height: auto;
+    padding: 2rem;
+    background-color: #fff;
+    position: relative;
+    top: 20%;
+    left: 25%;
+}
+
+#form_message .message_container .close {
+    position: absolute;
+    z-index: 9999;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+#form_message .message_container .close i {
+    font-size: 1.2rem;
+}
+
+#form_message .message_container h2 {
+    color: #313131;
+    font-size: 1.8rem;
+    font-family: "Libre Baskerville", Sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 3.5rem;
+    letter-spacing: 0px;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+#form_message .message_container .message_block_container {
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#form_message .message_container .message_block_container .message_block {
+    padding: 0.5rem;
+}
+
+#form_message .message_container .message_block_container .message_block p {
+    color: #000;
+    font-size: 1rem;
+    font-family: "Poppins", Sans-serif;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+#form_message .message_container .message_block_container .message_block p span {
+    font-size: 1.1rem;
+    color: #b97b59;
+}
+
+#form_message .message_container .message_block_container .message_block h4 {
+    color: #b97b59;
+    font-size: 1.5rem;
+    font-family: "Poppins", Sans-serif;
+    font-weight: 500;
+    padding: 1rem 0rem;
+}
+
+
+/* ===== For Desktop ===== */
+
+@media only screen and (min-width: 1201px) and (max-width:1440px) {
+    /* For desktop: */
+    .col-xxl-1 {
+        width: 8.33%;
+    }
+    .col-xxl-2 {
+        width: 16.66%;
+    }
+    .col-xxl-3 {
+        width: 25%;
+    }
+    .col-xxl-4 {
+        width: 33.33%;
+    }
+    .col-xxl-5 {
+        width: 41.66%;
+    }
+    .col-xxl-6 {
+        width: 50%;
+    }
+    .col-xxl-7 {
+        width: 58.33%;
+    }
+    .col-xxl-8 {
+        width: 66.66%;
+    }
+    .col-xxl-9 {
+        width: 75%;
+    }
+    .col-xxl-10 {
+        width: 83.33%;
+    }
+    .col-xxl-11 {
+        width: 91.66%;
+    }
+    .col-xxl-12 {
+        width: 100%;
+    }
+    /* ========================== Custom css ========================== */
+    .container1 {
+        padding: 0% 10%;
+    }
+    /* ========================== Navbar ========================== */
+    .navbar1 {
+        padding: 1rem;
+    }
+    /* ===== Navbar Menu ===== */
+    .nav-links ul.menu {
+        font-size: 0.875rem;
+    }
+    .nav-links ul.menu li {
+        padding: 0rem 0.7rem;
+    }
+    /* ========================== Slider CSS ========================== */
+    .box .slider_content_container .slider_transparency .slider_content {
+        width: 55%;
+    }
+    .box .slider_content_container .slider_transparency .slider_content h1 {
+        font-size: 170%;
+        padding: 0rem 0rem 2rem 0rem;
+    }
+    /* ========================== What Is Interbiz ========================== */
+    .wii {
+        padding: 5rem 0rem;
+    }
+    .wii .container1 {
+        padding: 0% 3%;
+    }
+    .wii .wii_container img {
+        height: 450px;
+    }
+    .wii .wii_container .wii_content {
+        height: 530px;
+    }
+    /* ========================== Our Services ========================== */
+    .our_services {
+        padding: 3rem 0rem;
+    }
+    .our_services .services_container .card_container {
+        padding: 0.8rem;
+    }
+    .our_services .services_container .card_container .card {
+        height: 480px;
+    }
+    .our_services .services_container .card_container .card img {
+        height: 90px;
+    }
+    /* ========================== Journey ========================== */
+    .journey {
+        padding: 4rem 0rem;
+    }
+    /* ========================== Industries ========================== */
+    .industries {
+        padding: 6rem 0rem;
+    }
+    .industries .industries_section .industries_container {
+        padding: 2rem 1rem;
+    }
+    .industries .industries_section .industries_container .industries_block {
+        height: 480px;
+    }
+    .industries .industries_section .industries_container .industries_block img {
+        height: 95px;
+    }
+    /* ========================== Testimonial ========================== */
+    .textimonial h1.header {
+        font-size: 3.9rem;
+    }
+    /* ========================== Get In Touch ========================== */
+    .get_in_touch .company_details .cd_container {
+        width: 100%;
+    }
+}
+
+
+/* ===== For laptop ===== */
+
+@media only screen and (min-width: 993px) and (max-width:1200px) {
+    /* For desktop: */
+    .col-xl-1 {
+        width: 8.33%;
+    }
+    .col-xl-2 {
+        width: 16.66%;
+    }
+    .col-xl-3 {
+        width: 25%;
+    }
+    .col-xl-4 {
+        width: 33.33%;
+    }
+    .col-xl-5 {
+        width: 41.66%;
+    }
+    .col-xl-6 {
+        width: 50%;
+    }
+    .col-xl-7 {
+        width: 58.33%;
+    }
+    .col-xl-8 {
+        width: 66.66%;
+    }
+    .col-xl-9 {
+        width: 75%;
+    }
+    .col-xl-10 {
+        width: 83.33%;
+    }
+    .col-xl-11 {
+        width: 91.66%;
+    }
+    .col-xl-12 {
+        width: 100%;
+    }
+    /* ========================== Custom Css ========================== */
+    .container1 {
+        padding: 0% 5%;
+    }
+    h1.header {
+        font-size: 2.8rem;
+        line-height: 4rem;
+        padding-bottom: 1.5rem;
+    }
+    p.sub_header {
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+    }
+    /* ========================== Navbar ========================== */
+    .navbar1 {
+        padding: 1rem;
+    }
+    .navbar1 .logo {
+        width: 230px;
+    }
+    /* ===== Navbar Menu ===== */
+    .nav-links ul.menu {
+        font-size: 0.85rem;
+    }
+    .nav-links ul.menu li {
+        padding: 0rem 0.6rem;
+    }
+    .nav-links ul.menu li a {
+        padding-top: 3px;
+    }
+    /* ========================== Slider CSS ========================== */
+    .box {
+        height: 450px;
+    }
+    .box .slider_content_container {
+        height: 450px;
+    }
+    .box .slider_content_container .slider_transparency {
+        height: 450px;
+    }
+    .box .slider_content_container .slider_transparency .slider_content {
+        width: 65%;
+    }
+    .box .slider_content_container .slider_transparency .slider_content h1 {
+        font-size: 180%;
+        padding: 0rem 0rem 1.5rem 0rem;
+    }
+    .box .slider_content_container .slider_transparency .slider_content button {
+        line-height: 1.4;
+        padding: 0.6em 1.5em;
+    }
+    /* ========================== What Is Interbiz ========================== */
+    .wii {
+        width: 100%;
+        padding: 3rem 0rem;
+    }
+    .wii .wii_container img {
+        height: 400px;
+    }
+    .wii .wii_container .wii_content {
+        height: 480px;
+        padding: 1.5rem 3rem;
+    }
+    .wii .wii_container .wii_content h1 {
+        font-size: 2.4rem;
+        padding-bottom: 0.7rem;
+    }
+    .wii .wii_container .wii_content p {
+        font-size: 0.85rem;
+        line-height: 1.5rem;
+    }
+    .wii .wii_container .wii_content button {
+        font-size: 0.85rem;
+        line-height: 2.8rem;
+    }
+    /* ========================== Our Services ========================== */
+    .our_services {
+        padding: 3rem 0rem;
+    }
+    .our_services .services_container .card_container {
+        padding: 0.5rem;
+    }
+    .our_services .services_container .card_container .card {
+        height: 400px;
+        padding: 1.3rem 0.6rem 0.6rem 0.6rem;
+    }
+    .our_services .services_container .card_container .card img {
+        height: 80px;
+    }
+    .our_services .services_container .card_container .card h3 {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        padding: 0.6rem 0rem;
+    }
+    .our_services .services_container .card_container .card p {
+        font-size: 0.85rem;
+        line-height: 1.3rem;
+        letter-spacing: 0.4px;
+    }
+    .our_services .services_container .card_container .card button {
+        font-size: 0.9rem;
+        line-height: 2.8;
+    }
+    /* ========================== Counter Section ========================== */
+    .counter {
+        padding: 4rem 0rem;
+    }
+    .counter .counter_container .counter_content_block {
+        padding: 0.8rem;
+    }
+    .counter .counter_container .counter_content_block .counter_content .counter_count_block h2 {
+        font-size: 1.5rem;
+    }
+    .counter .counter_container .counter_content_block .counter_content .counter_count_block span {
+        font-size: 1.5rem;
+    }
+    .counter .counter_container .counter_content_block .counter_content p {
+        font-size: 1rem;
+        padding-bottom: 2.5rem;
+    }
+    .counter .counter_container .counter_content_block .counter_content span.dot img {
+        width: 15px;
+        height: 15px;
+    }
+    /* ========================== We Work With ========================== */
+    .we_work_with {
+        padding: 4rem 0rem;
+    }
+    .we_work_with .software_section .software_container {
+        padding: 3rem;
+    }
+    .we_work_with .software_section .software_container img {
+        height: 120px;
+    }
+    /* ========================== Journey ========================== */
+    .journey {
+        padding: 3rem 0rem;
+    }
+    .journey .journey_content h3 {
+        font-size: 1.25rem;
+        line-height: 2.2rem;
+    }
+    .journey .journey_content button {
+        font-size: 1rem;
+        line-height: 2.8rem;
+    }
+    /* ========================== Industries ========================== */
+    .industries {
+        padding: 4rem 0rem;
+    }
+    .industries .industries_section .industries_container {
+        padding: 0.9rem;
+    }
+    .industries .industries_section .industries_container .industries_block {
+        height: 480px;
+    }
+    .industries .industries_section .industries_container .industries_block img {
+        height: 85px;
+    }
+    .industries .industries_section .industries_container .industries_block h3 {
+        font-size: 1.3rem;
+        padding: 1.3rem 0rem 0.7rem 0rem;
+    }
+    .industries .industries_section .industries_container .industries_block p {
+        font-size: 0.85rem;
+        line-height: 1.4rem;
+    }
+    .industries .industries_section .industries_container .industries_block button {
+        font-size: 0.9rem;
+        line-height: 2.8rem;
+        border-radius: 3rem;
+    }
+    /* ========================== Testimonial ========================== */
+    .textimonial h1.header {
+        font-size: 2.8rem;
+    }
+    .textimonial .client_container .client_review {
+        padding: 1rem;
+    }
+    .textimonial .client_container .client_review .client_review_block img {
+        height: 25px;
+    }
+    .textimonial .client_container .client_review .client_review_block p.client_thought {
+        font-size: 0.9rem;
+        line-height: 1.7em;
+    }
+    .textimonial .client_container .client_review .client_review_block h5.client_name {
+        font-size: 1.1rem;
+    }
+    /* ========================== Get In Touch ========================== */
+    .get_in_touch .git_block h1.header {
+        font-size: 2.8rem;
+        line-height: 3.5rem;
+    }
+    .get_in_touch .git_block .git_form_container {
+        width: 80%;
+    }
+    .get_in_touch .git_block .git_form_container .git_input_container {
+        padding: 0.7rem 1rem;
+    }
+    .get_in_touch .git_block .git_form_container .git_input_container .git_input .button_block button.btn {
+        font-size: 0.95rem;
+        line-height: 2.8rem;
+        border-radius: 3rem;
+    }
+    .get_in_touch .company_details .cd_container {
+        width: 100%;
+    }
+    .get_in_touch .company_details .cd_container .cd_block_container {
+        padding: 2rem;
+    }
+    .get_in_touch .company_details .cd_container .cd_block_container .cd_block h6 {
+        font-size: 1.1rem;
+        line-height: 1.2rem;
+        padding-bottom: 1.4rem;
+    }
+    .get_in_touch .company_details .cd_container .cd_block_container .cd_block p {
+        font-size: 0.95rem;
+    }
+    .get_in_touch .company_details .cd_container .cd_block_container .cd_block ul {
+        font-size: 0.95rem;
+    }
+    .get_in_touch .company_details .cd_container .cd_block_container .cd_block .socal_media a img {
+        width: 25px;
+        height: 25px;
+    }
+    /* ========================== Footer ========================== */
+    footer p {
+        font-size: 0.9rem;
+        padding: 0.8rem 0rem;
+    }
+}
+
+
+/* ===== For Small laptop ===== */
+
+@media only screen and (min-width: 769px) and (max-width:992px) {
+    /* For desktop: */
+    .col-lg-1 {
+        width: 8.33%;
+    }
+    .col-lg-2 {
+        width: 16.66%;
+    }
+    .col-lg-3 {
+        width: 25%;
+    }
+    .col-lg-4 {
+        width: 33.33%;
+    }
+    .col-lg-5 {
+        width: 41.66%;
+    }
+    .col-lg-6 {
+        width: 50%;
+    }
+    .col-lg-7 {
+        width: 58.33%;
+    }
+    .col-lg-8 {
+        width: 66.66%;
+    }
+    .col-lg-9 {
+        width: 75%;
+    }
+    .col-lg-10 {
+        width: 83.33%;
+    }
+    .col-lg-11 {
+        width: 91.66%;
+    }
+    .col-lg-12 {
+        width: 100%;
+    }
+    .container1 {
+        padding: 0% 5%;
+    }
+    h1.header {
+        font-size: 2.4rem;
+        line-height: 3.8rem;
+        padding-bottom: 1.5rem;
+    }
+    p.sub_header {
+        font-size: 0.95rem;
+        line-height: 1.2rem;
+        padding-bottom: 2rem;
+    }
+    /* ========================== Navbar ========================== */
+    .navbar1 {
+        padding: 1.2rem 0.8rem;
+    }
+    .navbar1 .logo {
+        width: 230px;
+    }
+    /* ===== Navbar Menu ===== */
+    .nav-links ul.menu {
+        font-size: 0.85rem;
+    }
+    .nav-links ul.menu li {
+        padding: 0rem 0.5rem;
+    }
+    .nav-links ul.menu li a {
+        padding-top: 3px;
+    }
+    /* ========================== Slider CSS ========================== */
+    .box {
+        height: 450px;
+    }
+    .box .slider_content_container {
+        height: 450px;
+    }
+    .box .slider_content_container .slider_transparency {
+        height: 450px;
+    }
+    .box .slider_content_container .slider_transparency .slider_content {
+        width: 75%;
+    }
+    .box .slider_content_container .slider_transparency .slider_content h1 {
+        font-size: 150%;
+    }
+    .box .slider_content_container .slider_transparency .slider_content button {
+        line-height: 1.3;
+        padding: 0.7em 2em;
+    }
+    /* ========================== What Is Interbiz ========================== */
+    .wii {
+        padding: 3rem 0rem;
+    }
+    .wii .wii_container img {
+        height: 380px;
+    }
+    .wii .wii_container .wii_content {
+        height: 450px;
+        padding: 1rem 2rem;
+    }
+    .wii .wii_container .wii_content h1 {
+        font-size: 2.2rem;
+        line-height: 2.5rem;
+    }
+    .wii .wii_container .wii_content p {
+        font-size: 0.9rem;
+        line-height: 1.4rem;
+        padding-bottom: 0.6rem;
+    }
+    .wii .wii_container .wii_content button {
+        font-size: 0.95rem;
+        line-height: 2.8rem;
+    }
+    /* ========================== Our Services ========================== */
+    .our_services {
+        padding: 3rem 0rem;
+    }
+    .our_services .services_container .card_container {
+        padding: 1rem;
+    }
+    .our_services .services_container .card_container .card {
+        height: 430px;
+        padding: 1.5rem;
+    }
+    .our_services .services_container .card_container .card img {
+        width: 50%;
+        height: 70px;
+    }
+    .our_services .services_container .card_container .card h3 {
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+        padding: 1rem 0rem;
+    }
+    .our_services .services_container .card_container .card p {
+        font-size: 0.85rem;
+        line-height: 1.5rem;
+    }
+    .our_services .services_container .card_container .card button {
+        font-size: 0.9rem;
+        line-height: 2.8;
+    }
+    /* ========================== Counter Section ========================== */
+    .counter {
+        padding: 4rem 0rem;
+    }
+    .counter .counter_container .counter_content_block {
+        padding: 0.7rem;
+    }
+    .counter .counter_container .counter_content_block .counter_content img {
+        height: 45px;
+        width: 45px;
+    }
+    .counter .counter_container .counter_content_block .counter_content .counter_count_block {
+        padding-top: 1.25rem;
+    }
+    .counter .counter_container .counter_content_block .counter_content .counter_count_block h2 {
+        font-size: 1.4rem;
+    }
+    .counter .counter_container .counter_content_block .counter_content .counter_count_block span {
+        font-size: 1.4rem;
+    }
+    .counter .counter_container .counter_content_block .counter_content p {
+        font-size: 1rem;
+        padding-bottom: 2rem;
+    }
+    .counter .counter_container .counter_content_block .counter_content span.dot img {
+        width: 15px;
+        height: 15px;
+    }
+    /* ========================== We Work With ========================== */
+    .we_work_with {
+        padding: 3rem 0rem;
+    }
+    .we_work_with .software_section .software_container {
+        padding: 2.3rem;
+    }
+    .we_work_with .software_section .software_container img {
+        height: 110px;
+    }
+    /* ========================== Journey ========================== */
+    .journey {
+        background-color: rgba(26, 35, 126, 0.19);
+        padding: 3rem 0rem;
+    }
+    .journey .journey_content h3 {
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+    }
+    .journey .journey_content button {
+        font-size: 1rem;
+        line-height: 2.7rem;
+    }
+    /* ========================== Industries ========================== */
+    .industries {
+        padding: 3rem 0rem;
+    }
+    .industries .industries_section .industries_container {
+        padding: 0.7rem;
+    }
+    .industries .industries_section .industries_container .industries_block {
+        height: 470px;
+    }
+    .industries .industries_section .industries_container .industries_block img {
+        height: 70px;
+    }
+    .industries .industries_section .industries_container .industries_block h3 {
+        font-size: 1.2rem;
+        padding: 1rem 0rem;
+    }
+    .industries .industries_section .industries_container .industries_block p {
+        font-size: 0.85rem;
+        line-height: 1.3rem;
+    }
+    .industries .industries_section .industries_container .industries_block button {
+        font-size: 0.9rem;
+        line-height: 2.7rem;
+    }
+    /* ========================== Testimonial ========================== */
+    .textimonial {
+        padding: 3rem 0rem;
+    }
+    .textimonial h1.header {
+        font-size: 2.2rem;
+    }
+    .textimonial .client_container .client_review {
+        padding: 1rem;
+    }
+    .textimonial .client_container .client_review .client_review_block img {
+        height: 25px;
+    }
+    .textimonial .client_container .client_review .client_review_block p.client_thought {
+        font-size: 0.9rem;
+        line-height: 1.5em;
+        padding: 1.7rem 0rem;
+    }
+    .textimonial .client_container .client_review .client_review_block h5.client_name {
+        font-size: 1.1rem;
+    }
+    /* ========================== Get In Touch ========================== */
+    .get_in_touch {
+        padding: 3rem 0rem;
+    }
+    .get_in_touch .git_block h1.header {
+        font-size: 2.1rem;
+        line-height: 3.8rem;
+    }
+    .get_in_touch .git_block .git_form_container {
+        width: 90%;
+    }
+    .get_in_touch .git_block .git_form_container .git_input_container {
+        padding: 0.7rem;
+    }
+    .get_in_touch .git_block .git_form_container .git_input_container .git_input label {
+        font-size: 0.85rem;
+    }
+    .get_in_touch .git_block .git_form_container .git_input_container .git_input input {
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+        padding: 0.43rem 0.6rem;
+    }
+    .get_in_touch .git_block .git_form_container .git_input_container .git_input textarea {
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+        padding: 0.43rem 0.6rem;
+    }
+    .get_in_touch .git_block .git_form_container .git_input_container .git_input .button_block button.btn {
+        font-size: 0.9rem;
+        line-height: 2.7rem;
+    }
+    .get_in_touch .company_details .cd_container {
+        width: 100%;
+    }
+    .get_in_touch .company_details .cd_container .cd_block_container {
+        height: 350px;
+        padding: 1.5rem 1rem 1rem 1rem;
+    }
+    .get_in_touch .company_details .cd_container .cd_block_container .cd_block h6 {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        padding-bottom: 1rem;
+    }
+    .get_in_touch .company_details .cd_container .cd_block_container .cd_block p {
+        font-size: 0.85rem;
+        line-height: 1.5rem;
+    }
+    .get_in_touch .company_details .cd_container .cd_block_container .cd_block ul {
+        font-size: 0.85rem;
+        line-height: 1.5rem;
+    }
+    .get_in_touch .company_details .cd_container .cd_block_container .cd_block .socal_media a img {
+        width: 25px;
+        height: 25px;
+    }
+    /* ========================== Footer ========================== */
+    footer p {
+        font-size: 0.85rem;
+        padding: 0.7rem 0rem;
+    }
+}
+
+
+/* ===== For Tabs ===== */
+
+@media only screen and (min-width: 577px) and (max-width:768px) {
+    /* For desktop: */
+    .col-md-1 {
+        width: 8.33%;
+    }
+    .col-md-2 {
+        width: 16.66%;
+    }
+    .col-md-3 {
+        width: 25%;
+    }
+    .col-md-4 {
+        width: 33.33%;
+    }
+    .col-md-5 {
+        width: 41.66%;
+    }
+    .col-md-6 {
+        width: 50%;
+    }
+    .col-md-7 {
+        width: 58.33%;
+    }
+    .col-md-8 {
+        width: 66.66%;
+    }
+    .col-md-9 {
+        width: 75%;
+    }
+    .col-md-10 {
+        width: 83.33%;
+    }
+    .col-md-11 {
+        width: 91.66%;
+    }
+    .col-md-12 {
+        width: 100%;
+    }
+    .container1 {
+        padding: 0% 5%;
+    }
+    .d-md-none {
+        display: none;
+    }
+    .d-md-block {
+        display: block;
+    }
+    h1.header {
+        font-size: 2.3rem;
+        line-height: 3.8rem;
+        padding-bottom: 1.7rem;
+    }
+    p.sub_header {
+        font-size: 1rem;
+        line-height: 1.2rem;
+        padding-bottom: 2rem;
+    }
+    /* ========================== Navbar ========================== */
+    .navbar1 {
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+    .navbar1 .logo {
+        width: 250px;
+    }
+    .navbar1 .logo img {
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+    /* ===== Navbar Menu ===== */
+    .nav-links ul.menu {
+        font-size: 0.9rem;
+        list-style: none;
+    }
+    .nav-links ul.menu li {
+        display: block;
+        padding: 0rem 1rem;
+    }
+    .nav-links ul.menu li a {
+        color: #000;
+        text-decoration: none;
+        position: relative;
+        padding-top: 4px;
+    }
+    .nav-links ul.menu li:hover a {
+        color: #0366d6;
+    }
+    .nav-links ul.menu li a:active {
+        color: #0366d6;
+    }
+    .nav-links ul.menu li:hover a::after {
+        position: absolute;
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 100;
+        height: 2px;
+        background-color: #0366d6;
+        transition: 0.3s;
+        right: 0;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+    }
+    /* ========================== Slider CSS ========================== */
+    .box {
+        height: 350px;
+    }
+    .box .slider_content_container {
+        height: 350px;
+    }
+    .box .slider_content_container .slider_transparency {
+        height: 350px;
+    }
+    .box .slider_content_container .slider_transparency .slider_content {
+        width: 75%;
+    }
+    .box .slider_content_container .slider_transparency .slider_content h1 {
+        font-size: 180%;
+        padding: 0rem 0rem 1.5rem 0rem;
+    }
+    .box .slider_content_container .slider_transparency .slider_content button {
+        font-size: 0.85rem;
+        line-height: 1.3;
+        padding: 0.5rem 1.5rem;
+    }
+    /* ========================== What Is Interbiz ========================== */
+    .wii {
+        padding: 3rem 0rem;
+    }
+    .wii .wii_container .wii_content {
+        height: auto;
+        padding: 2rem 5rem;
+    }
+    .wii .wii_container .wii_content button {
+        font-size: 0.9rem;
+        line-height: 2.7rem;
+    }
+    /* ========================== Our Services ========================== */
+    .our_services {
+        padding: 3rem 0rem;
+    }
+    .our_services .services_container .card_container {
+        padding: 0.6rem;
+    }
+    .our_services .services_container .card_container .card {
+        height: 430px;
+        padding: 1rem;
+    }
+    .our_services .services_container .card_container .card img {
+        width: 60%;
+        height: 75px;
+    }
+    .our_services .services_container .card_container .card h3 {
+        font-size: 1.1rem;
+        line-height: 1.7rem;
+        padding: 0.5rem 0rem;
+    }
+    .our_services .services_container .card_container .card p {
+        font-size: 0.9rem;
+        line-height: 1.4rem;
+    }
+    .our_services .services_container .card_container .card button {
+        font-size: 0.85rem;
+        line-height: 2.4rem;
+        padding: 0rem 2.5rem;
+    }
+    /* ========================== Counter Section ========================== */
+    .counter {
+        padding: 4rem 0rem;
+    }
+    .counter .counter_container .counter_content_block {
+        padding: 4rem 0rem;
+    }
+    .counter .counter_container .counter_content_block .counter_content p {
+        padding-bottom: 2rem;
+    }
+    /* ========================== We Work With ========================== */
+    .we_work_with {
+        padding: 3rem 0rem;
+    }
+    .we_work_with .software_section .software_container {
+        padding: 2rem;
+    }
+    .we_work_with .software_section .software_container img {
+        height: 100px;
+    }
+    /* ========================== Journey ========================== */
+    .journey {
+        padding: 3rem 0rem;
+    }
+    .journey .journey_content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .journey .journey_content h3 {
+        font-size: 1.5rem;
+        padding-right: 0rem;
+        padding-bottom: 1rem;
+    }
+    .journey .journey_content button {
+        font-size: 1rem;
+        line-height: 2.8rem;
+    }
+    /* ========================== Industries ========================== */
+    .industries {
+        padding: 4rem 0rem;
+    }
+    .industries .industries_section .industries_container .industries_block {
+        height: auto;
+    }
+    .industries .industries_section .industries_container .industries_block img {
+        height: 70px;
+    }
+    .industries .industries_section .industries_container .industries_block h3 {
+        font-size: 1.4rem;
+    }
+    .industries .industries_section .industries_container .industries_block p {
+        padding-bottom: 1.3rem;
+    }
+    .industries .industries_section .industries_container .industries_block button {
+        font-size: 1rem;
+        line-height: 2.8rem;
+    }
+    /* ========================== Testimonial ========================== */
+    .textimonial h1.header {
+        font-size: 2.4rem;
+    }
+    .textimonial .client_container .client_review {
+        padding: 3rem 1.5rem;
+    }
+    .textimonial .client_container .client_review .client_review_block img {
+        height: 30px;
+    }
+    .textimonial .client_container .client_review .client_review_block p.client_thought {
+        padding: 1rem 0rem;
+    }
+    .textimonial .client_container .client_review .client_review_block h5.client_name {
+        font-size: 1.1rem;
+    }
+    /* ========================== Get In Touch ========================== */
+    .get_in_touch {
+        padding: 4rem 0rem;
+    }
+    .get_in_touch .git_block h1.header {
+        font-size: 2.4rem;
+        line-height: 3.8rem;
+    }
+    .get_in_touch .git_block .git_form_container {
+        width: 100%;
+    }
+    .get_in_touch .git_block .git_form_container .git_input_container {
+        padding: 0.5rem 1rem;
+    }
+    .get_in_touch .git_block .git_form_container .git_input_container .git_input .button_block button.btn {
+        font-size: 0.95rem;
+    }
+    .get_in_touch .company_details .cd_container {
+        width: 100%;
+    }
+    .get_in_touch .company_details .cd_container .cd_block_container {
+        height: 250px;
+        padding: 2rem;
+    }
+    /* ========================== Footer ========================== */
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* ===== For Mobile ===== */
+
+@media only screen and (min-width: 0px) and (max-width:576px) {
+    /* For mobile: */
+    .col-sm-1 {
+        width: 8.33%;
+    }
+    .col-sm-2 {
+        width: 16.66%;
+    }
+    .col-sm-3 {
+        width: 25%;
+    }
+    .col-sm-4 {
+        width: 33.33%;
+    }
+    .col-sm-5 {
+        width: 41.66%;
+    }
+    .col-sm-6 {
+        width: 50%;
+    }
+    .col-sm-7 {
+        width: 58.33%;
+    }
+    .col-sm-8 {
+        width: 66.66%;
+    }
+    .col-sm-9 {
+        width: 75%;
+    }
+    .col-sm-10 {
+        width: 83.33%;
+    }
+    .col-sm-11 {
+        width: 91.66%;
+    }
+    .col-sm-12 {
+        width: 100%;
+    }
+    .container1 {
+        padding: 0% 4%;
+    }
+    h1.header {
+        font-size: 2.1rem;
+        line-height: 3.8rem;
+    }
+    p.sub_header {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding-bottom: 2rem;
+    }
+    .d-sm-none {
+        display: none;
+    }
+    .d-sm-block {
+        display: block;
+    }
+    .slick-prev {
+        left: 1rem;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        font-size: 1.4rem;
+    }
+    .slick-next {
+        right: 1rem;
+    }
+    /* ========================== Navbar ========================== */
+    .navbar1 .logo {
+        width: 170px;
+    }
+    .nav-links ul.menu li {
+        display: block;
+        padding: 0rem 1rem;
+    }
+    /* ========================== Slider CSS ========================== */
+    .box {
+        height: 400px;
+    }
+    .box .slider_content_container {
+        height: 400px;
+    }
+    .box .slider_content_container .slider_transparency {
+        height: 400px;
+    }
+    .box .slider_content_container .slider_transparency .slider_content {
+        width: 90%;
+    }
+    .box .slider_content_container .slider_transparency .slider_content h1 {
+        font-size: 140%;
+        line-height: 1.2;
+        padding: 0rem 0rem 2rem 0rem;
+    }
+    .box .slider_content_container .slider_transparency .slider_content button {
+        font-size: 0.9rem;
+        line-height: 1.3;
+        padding: 0.8em 1.5em;
+    }
+    /* ========================== What Is Interbiz ========================== */
+    .wii {
+        padding: 2rem 0rem;
+    }
+    .wii .wii_container .wii_content {
+        height: auto;
+        padding: 1rem 2rem;
+    }
+    .wii .wii_container .wii_content h1 {
+        font-size: 1.8rem;
+        line-height: 3rem;
+    }
+    .wii .wii_container .wii_content p {
+        font-size: 0.85rem;
+        line-height: 1.6rem;
+    }
+    .wii .wii_container .wii_content button {
+        font-size: 0.9rem;
+        line-height: 2.8rem;
+        margin-top: 1.4rem;
+    }
+    /* ========================== Our Services ========================== */
+    .our_services {
+        padding: 3rem 0rem;
+    }
+    .our_services .services_container .card_container {
+        padding: 1.5rem 0rem;
+    }
+    .our_services .services_container .card_container .card {
+        height: auto;
+    }
+    .our_services .services_container .card_container .card img {
+        width: 50%;
+        height: 70px;
+    }
+    .our_services .services_container .card_container .card h3 {
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+        padding: 0.6rem 0rem;
+    }
+    .our_services .services_container .card_container .card p {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        padding-bottom: 2rem;
+    }
+    .our_services .services_container .card_container .card button {
+        font-size: 0.9rem;
+        line-height: 2.8;
+    }
+    /* ========================== Counter Section ========================== */
+    .counter {
+        padding: 4rem 0rem;
+    }
+    .counter .counter_container .counter_content_block {
+        padding: 3.5rem 0rem;
+    }
+    .counter .counter_container .counter_content_block .counter_content p {
+        padding-bottom: 1.5rem;
+    }
+    /* ========================== We Work With ========================== */
+    .we_work_with {
+        padding: 4rem 0rem;
+    }
+    .we_work_with .software_section .software_container {
+        padding: 1rem;
+    }
+    .we_work_with .software_section .software_container img {
+        height: 110px;
+    }
+    /* ========================== Journey ========================== */
+    .journey {
+        background-color: rgba(26, 35, 126, 0.19);
+        padding: 4rem 0rem;
+    }
+    .journey .journey_content {
+        flex-direction: column;
+    }
+    .journey .journey_content h3 {
+        font-size: 1.3rem;
+        padding-right: 0rem;
+        padding-bottom: 1rem;
+        text-align: center;
+    }
+    .journey .journey_content button {
+        font-size: 0.9rem;
+        line-height: 2.8rem;
+    }
+    /* ========================== Industries ========================== */
+    .industries {
+        padding: 4rem 0rem;
+    }
+    .industries .industries_section .industries_container {
+        padding: 2rem 1rem;
+    }
+    .industries .industries_section .industries_container .industries_block {
+        height: auto;
+    }
+    .industries .industries_section .industries_container .industries_block img {
+        height: 70px;
+    }
+    .industries .industries_section .industries_container .industries_block h3 {
+        font-size: 1.3rem;
+    }
+    .industries .industries_section .industries_container .industries_block p {
+        font-size: 0.85rem;
+        line-height: 1.4rem;
+        padding-bottom: 2rem;
+    }
+    .industries .industries_section .industries_container .industries_block button {
+        font-size: 0.85rem;
+        line-height: 2.7rem;
+    }
+    /* ========================== Testimonial ========================== */
+    .textimonial {
+        padding: 4rem 0rem;
+    }
+    .textimonial h1.header {
+        font-size: 2.1rem;
+        line-height: 2.4rem;
+    }
+    .textimonial .client_container .client_review {
+        padding: 2.5rem 1rem;
+    }
+    .textimonial .client_container .client_review .client_review_block img {
+        height: 25px;
+    }
+    .textimonial .client_container .client_review .client_review_block p.client_thought {
+        font-size: 0.9rem;
+        line-height: 1.8em;
+        padding: 1rem 0rem;
+    }
+    .textimonial .client_container .client_review .client_review_block h5.client_name {
+        font-size: 1.1rem;
+    }
+    /* ========================== Get In Touch ========================== */
+    .get_in_touch {
+        padding: 4rem 0rem;
+    }
+    .get_in_touch .git_block h1.header {
+        font-size: 1.8rem;
+        line-height: 3.8rem;
+    }
+    .get_in_touch .git_block .git_form_container {
+        width: 100%;
+    }
+    .get_in_touch .git_block .git_form_container .git_input_container {
+        padding: 0.5rem;
+    }
+    .get_in_touch .git_block .git_form_container .git_input_container .git_input label {
+        font-size: 0.85rem;
+    }
+    .get_in_touch .git_block .git_form_container .git_input_container .git_input input {
+        font-size: 0.85rem;
+        line-height: 1.5rem;
+    }
+    .get_in_touch .git_block .git_form_container .git_input_container .git_input textarea {
+        font-size: 0.85rem;
+        line-height: 1.5rem;
+    }
+    .get_in_touch .git_block .git_form_container .git_input_container .git_input .button_block button.btn {
+        font-size: 0.9rem;
+        line-height: 2.8rem;
+    }
+    .get_in_touch .company_details .cd_container {
+        width: 100%;
+    }
+    .get_in_touch .company_details .cd_container .cd_block_container {
+        height: auto;
+        padding: 2rem 1.6rem 1.6rem;
+    }
+    .get_in_touch .company_details .cd_container .cd_block_container .cd_block h6 {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .get_in_touch .company_details .cd_container .cd_block_container .cd_block p {
+        font-size: 0.9rem;
+        line-height: 1.8rem;
+    }
+    .get_in_touch .company_details .cd_container .cd_block_container .cd_block ul {
+        font-size: 0.9rem;
+        line-height: 2rem;
+    }
+    .get_in_touch .company_details .cd_container .cd_block_container .cd_block .socal_media a img {
+        width: 25px;
+        height: 25px;
+    }
+    /* ========================== Footer ========================== */
+    footer p {
+        font-size: 0.8rem;
+        padding: 1.2rem 0rem;
+    }
+}
+
+
+/* ======================================================= Navbar =============================================== */
+
+.dropdown {
+    background-color: #fff;
+    padding: 1em 0;
+    position: absolute;
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+}
+
+.dropdown li+li {
+    margin-top: 10px;
+}
+
+.dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+}
+
+.dropdown li:hover {
+    background-color: #4c9e9e;
+}
+
+.services:hover .dropdown {
+    display: block;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+    .navbar1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        background-color: #fff;
+        color: rgb(6, 6, 6);
+    }
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        right: 0;
+        left: -40;
+        text-align: left;
+        padding: 10px 0;
+    }
+    .menu li:hover {
+        display: inline-block;
+        background-color: #fff;
+        transition: 0.3s ease;
+    }
+    .menu li+li {
+        margin-top: 12px;
+    }
+    input[type=checkbox]:checked~.menu {
+        display: block;
+        margin-left: 0px;
+        left: 0px;
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+    .hamburger {
+        display: block;
+    }
+    .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+    }
+    .logo img {
+        width: 130px;
+        margin: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem;
+        background-color: #fff;
+        color: rgb(6, 6, 6);
+    }
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        right: 0;
+        left: -40;
+        text-align: left;
+        padding: 10px 0;
+    }
+    .menu li:hover {
+        display: inline-block;
+        background-color: #fff;
+        transition: 0.3s ease;
+    }
+    .menu li+li {
+        margin-top: 12px;
+    }
+    input[type=checkbox]:checked~.menu {
+        display: block;
+        margin-left: 0px;
+        left: 0px;
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+    .hamburger {
+        display: block;
+    }
+    .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+    }
+}
